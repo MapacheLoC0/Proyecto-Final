@@ -1,0 +1,421 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    color: #6c5ce7;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    color: #4834d4;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Estilos para formularios de autenticación */
+.auth-screen {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-screen:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(149, 157, 165, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4b4b4b;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #5649c0;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #ff7675;
+    border-radius: 6px;
+}
+
+.btn-small:hover {
+    background-color: #e84c3d;
+}
+
+.auth-screen p {
+    text-align: center;
+    margin-top: 24px;
+    color: #636e72;
+    font-size: 14px;
+}
+
+.auth-screen a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-screen a:hover {
+    color: #4834d4;
+    text-decoration: underline;
+}
+
+/* Estilos para la pantalla del mapa */
+#map-screen {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e1e5eb;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    font-weight: 600;
+    color: #4b4b4b;
+    background-color: #f0f2f5;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.map-container {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.select-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.select-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4b4b4b;
+    font-size: 14px;
+}
+
+.select-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    font-size: 16px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.select-group select:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+#calculate-btn {
+    align-self: flex-end;
+    min-width: 150px;
+}
+
+.graph-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 24px;
+    border: 2px solid #e1e5eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#graph-canvas {
+    width: 100%;
+    height: 100%;
+    background-color: #f8fafc;
+}
+
+/* Estilos para resultados y animación */
+.results {
+    margin-top: 24px;
+    padding: 20px;
+    border-top: 2px solid #e1e5eb;
+}
+
+.progress-container {
+    margin-bottom: 24px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e1e5eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #6c5ce7 0%, #a29bfe 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 20px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #636e72;
+}
+
+.trip-info {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e1e5eb;
+}
+
+.trip-info h3 {
+    margin-bottom: 16px;
+    color: #4834d4;
+    font-weight: 600;
+}
+
+.trip-info p {
+    margin-bottom: 12px;
+    color: #4b4b4b;
+    font-size: 16px;
+}
+
+.trip-info p span {
+    font-weight: 600;
+    color: #6c5ce7;
+}
+
+#new-trip-btn {
+    margin-top: 20px;
+}
+
+/* Estilos para nodos del grafo */
+.node {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #6c5ce7;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3);
+}
+
+.node.selected-origin {
+    background-color: #00b894;
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 184, 148, 0.4);
+}
+
+.node.selected-destination {
+    background-color: #ff7675;
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(255, 118, 117, 0.4);
+}
+
+.node.path {
+    background-color: #fdcb6e;
+    box-shadow: 0 4px 8px rgba(253, 203, 110, 0.4);
+}
+
+.edge {
+    position: absolute;
+    height: 3px;
+    background-color: #dfe6e9;
+    transform-origin: left center;
+}
+
+.edge.path {
+    background-color: #fdcb6e;
+    height: 5px;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(253, 203, 110, 0.6);
+}
+
+.edge-weight {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #4b4b4b;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación del vehículo */
+.vehicle {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #a29bfe;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.5s linear;
+    box-shadow: 0 4px 8px rgba(162, 155, 254, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+    
+    .graph-container {
+        height: 300px;
+    }
+    
+    .auth-screen {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn:focus {
+    animation: pulse 1s infinite;
+}
+
+/* Estilos adicionales para mejorar la experiencia de usuario */
+::selection {
+    background-color: rgba(108, 92, 231, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #b2bec3;
+}
+
+/* Importar fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
